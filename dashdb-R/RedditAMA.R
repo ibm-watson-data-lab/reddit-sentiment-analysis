@@ -2,8 +2,6 @@ library(ibmdbR)
 mycon <- idaConnect("BLUDB", "", "")
 idaInit(mycon)
 
-#emotions <- c('"Agreeableness"', '"Analytical"','"Anger"','"Cheerfulness"','"Confident"','"Conscientiousness"','"Negative"','"Openness"','"Tentative"')
-
 emotions <- c('AGREEABLENESS', 'ANALYTICAL', 'ANGER', 'CONFIDENT', 'CONSCIENTIOUSNESS', 'DISGUST', 'EMOTIONAL_RANGE', 'EXTRAVERSION', 'FEAR', 'JOY', 'OPENNESS', 'SADNESS', 'TENTATIVE')
 displaynames <- c('AGREEABLE', 'ANALYTICAL', 'ANGER', 'CONFIDENT', 'CONSCIENTIOUS', 'DISGUST', 'EMO RANGE', 'XVERSION', 'FEAR', 'JOY', 'OPEN', 'SAD', 'TENTATIVE')
 
