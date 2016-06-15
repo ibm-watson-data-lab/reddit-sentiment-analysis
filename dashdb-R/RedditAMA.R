@@ -6,14 +6,13 @@ emotions <- c('AGREEABLENESS', 'ANALYTICAL', 'ANGER', 'CONFIDENT', 'CONSCIENTIOU
 displaynames <- c('AGREEABLE', 'ANALYTICAL', 'ANGER', 'CONFIDENT', 'CONSCIENTIOUS', 'DISGUST', 'EMO RANGE', 'XVERSION', 'FEAR', 'JOY', 'OPEN', 'SAD', 'TENTATIVE')
 
 count <- list()
-print("Length of emotions ", length(emotions))
 for(i in 1:13){
   query <- paste('select count(*) from DASH014376."REDDIT_IBMAMA_TOP_COMMENTS_ONLY" where ',emotions[i],' > 70')
 
 df <- idaQuery(query,as.is=F)
-nrow(df) 
-ncol(df) 
-df
+nrow(df) # print number of rows 
+ncol(df) # print number of columns
+df       # print dataframe
 count[[i]] <- df[1,]
 }
 count
