@@ -16,12 +16,10 @@ df       # print dataframe
 count[[i]] <- df[1,]
 }
 count
-sink('/dev/null') 
 distribution <- unlist(count)
 
 barplot(distribution,main="Histogram of comments by sentiments > 70% in IBM Reddit AMA",names.arg=displaynames, col=139, cex.axis=0.8,cex.names=0.7,xlab="Tone",ylab="Count")
 
-sink('/dev/null') 
 idaClose(mycon)
 
 

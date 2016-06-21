@@ -37,7 +37,6 @@ for(i in 1:13){
    
 }  
 
-sink('/dev/null') 
 idaClose(mycon)
 
 
