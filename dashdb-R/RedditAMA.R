@@ -7,7 +7,7 @@ displaynames <- c('AGREEABLE', 'ANALYTICAL', 'ANGER', 'CONFIDENT', 'CONSCIENTIOU
 
 count <- list()
 for(i in 1:13){
-  query <- paste('select count(*) from DASH014376."REDDIT_IBMAMA_TOP_COMMENTS_ONLY" where ',emotions[i],' > 70')
+  query <- paste('select count(*) from REDDIT_IBMAMA_TOP_COMMENTS_ONLY where ',emotions[i],' > 70')
 
 df <- idaQuery(query,as.is=F)
 nrow(df) # print number of rows 
