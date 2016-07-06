@@ -9,8 +9,9 @@ emotions <- c('AGREEABLENESS', 'ANALYTICAL', 'ANGER', 'CONFIDENT', 'CONSCIENTIOU
 count <- list()
 print("Length of emotions ", length(emotions))
 for(i in 1:13){
+
   query <- paste('select count(*) from REDDIT_IBMAMA_TOP_COMMENTS_ONLY where ',emotions[i],' > 70')
-  
+
   df <- idaQuery(query,as.is=F)
   nrow(df) 
   ncol(df) 
@@ -20,6 +21,7 @@ for(i in 1:13){
 count
 
 for(i in 1:13){
+
   query <- paste('select AUTHOR,TEXT from REDDIT_IBMAMA_TOP_COMMENTS_ONLY where ',emotions[i],' > 70')
   
   df <- idaQuery(query,as.is=F)
