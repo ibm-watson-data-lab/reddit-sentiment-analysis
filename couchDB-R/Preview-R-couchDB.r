@@ -66,7 +66,7 @@ for(i in 1:length(columns)){
     print(columns[i])
     print('-----------------------------------------------------------------------------')
     comments <- as.data.frame(select(columnset,"author","text")) ## not helpful print prints columnwise
-        for(j in 1:length(comments)){
+        for(j in 1:length(columnset)){
             print(paste("Author: ",comments[j,1]))
             print(paste("Comments: ",comments[j,2]))
         }
