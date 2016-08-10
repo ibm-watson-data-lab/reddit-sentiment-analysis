@@ -2,6 +2,8 @@
 install.packages("couchDB") ### One time only as the package is installed for the user
 
 library("couchDB")
+options(warn=-1) #turn off warnings globally for the notebook
+#options(warn=0) #turn on warnings 
 
 sqlContext <- sparkRSQL.init(sc)
 
