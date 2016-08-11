@@ -57,7 +57,7 @@ count <- list()
 
 distribution <- unlist(count)
 par(las=2)
-barplot(distribution, main="Histogram of comments by sentiments > 70% in a MongoDB reddit",col=139, ylim=c(0,2.5),cex.axis=0.5,cex.names=0.5,ylab="Reddit comment count")
+barplot(distribution, main="Histogram of comments by sentiments > 70% in a reddit",col=139, ylim=c(0,2.5),cex.axis=0.5,cex.names=0.5,ylab="Reddit comment count")
 
 for(i in 1:length(columns)){
     columnset <- filter(df2,paste(columns[i], ' > 70') )
@@ -65,8 +65,8 @@ for(i in 1:length(columns)){
     print('-----------------------------------------------------------------------------')
     print(columns[i])
     print('-----------------------------------------------------------------------------')
-    comments <- as.data.frame(select(columnset,"author","text")) ## not helpful print prints columnwise
-        for(j in 1:length(columnset)){
+    comments <- as.data.frame(select(columnset,"author","text")) 
+        for(j in 1:count(columnset)){
             print(paste("Author: ",comments[j,1]))
             print(paste("Comments: ",comments[j,2]))
         }
