@@ -1,6 +1,6 @@
-
 # Reddit AMA Sentiment Analysis
 
+:no_entry_sign: This project is no longer maintained
 
 Start by reading the tutorial for this repo: [Sentiment Analysis of Reddit AMAs](https://developer.ibm.com/clouddataservices/2016/03/10/sentiment-analysis-of-reddit-amas/) which explains how to use Apache Spark, Cloudant, and Watson Tone Analyzer to perform sentiment analysis on a reddit Ask Me Anything web event.
 
